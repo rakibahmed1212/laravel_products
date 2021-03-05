@@ -68,7 +68,6 @@ class ProductController extends Controller
     public function update(Request $request, Products $product)
     {
         $product->update($request->all());
-
         return response([ 'product' => new ProductResource($product), 'message' => 'Retrieved successfully'], 200);
     }
 
